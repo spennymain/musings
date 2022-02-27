@@ -16,7 +16,7 @@
     sarcasm = "just kidding. i really don't care."
     setTimeout(function() {
       window.location.href ='/portfolio'
-    }, 2000)
+    }, 250)
   }
 
 </script>
@@ -37,32 +37,16 @@
 </div>
 
 <style>
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .buttons button {
-    background-color: black;
-    color: white;
-    border-radius: 5%;
-    border: none;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    padding: 0.25% 1%;
-    width: 5%;
-    transition-duration: 0.66s;
-  }
-  .buttons button:hover {
-    background-color: white;
-    color: black;
-  }
   h1, h3, p{
     margin: 0;
     text-align: center;
   }
   h3 {
     margin-top: 1%;
+  }
+  .buttons button {
+    width: 5%;
+    padding: 0.25% 1%;
   }
 
 </style>

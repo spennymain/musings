@@ -10,3 +10,21 @@ html, body {
   flex-direction: column;
   justify-content: center;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  background-color: black;
+  color: white;
+  border-radius: 5%;
+  border: none;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  transition-duration: 0.66s;
+}
+.buttons button:hover {
+  background-color: white;
+  color: black;
+}
