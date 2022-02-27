@@ -15,7 +15,7 @@
   function handleClick() {
     sarcasm = "just kidding. i really don't care."
     setTimeout(function() {
-      window.location.href ='/shell'
+      window.location.href ='/portfolio'
     }, 2000)
   }
 
@@ -39,6 +39,7 @@
 <style>
   .buttons {
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
   .buttons button {
