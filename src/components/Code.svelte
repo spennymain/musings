@@ -12,9 +12,9 @@
   });
 
   function getReadme(repo) {
-      fetch('https://api.github.com/repos/spennymain/{repo}/readme', {
+      fetch(`https://api.github.com/repos/spennymain/${repo}/readme`, {
           headers: {"Accept": "application/vnd.github.v3+json"}
-        }).then(res => res.json()).then(data => data)
+        }).then(res => res.json()).then(data => atob(data.content))
   }
 
 </script>
@@ -23,10 +23,12 @@
 <div>
   {#each repos as repo}
     {#if pinnedRepos.includes(repo.name)}
-    <a href={repo.html_url}>
-      <h3>{repo.name}</h3>
-    </a>
-    <p>{getReadme(repo.name)}</p>
+    <div class="innerdiv">
+      <a href={repo.html_url}>
+        <h3>{repo.name}</h3>
+      </a>
+      <p>{getReadme(repo.name)}</p>
+    </div>
     {/if}
   {:else}
     <p>loading...</p>
@@ -38,6 +40,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+  .innerdiv {
+    display: flex;
+    flex-direction: column;
   }
   a {
     color: white;
